@@ -3,6 +3,12 @@
 Little utility to parse a Rust source file into a `syn::File` and print out a
 debug representation of the syntax tree.
 
+### [`cfg-eval`](cfg-eval)
+
+Reusable three-valued evaluation of `cfg` / `cfg_attr` conditionals on a
+parsed `syn::File`, reporting which items a configuration would keep without
+compiling the project.
+
 ### [`heapsize`](heapsize)
 
 An example implementation of a derive macro that generates trait impls.
