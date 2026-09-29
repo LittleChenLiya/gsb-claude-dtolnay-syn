@@ -1,3 +1,9 @@
+### [`consolidate-use`](consolidate-use)
+
+Expands `use` trees and merges consecutive `use` declarations with common path
+prefixes, producing a new `syn` AST that preserves `self`, globs, renames and
+absolute paths.
+
 ### [`dump-syntax`](dump-syntax)
 
 Little utility to parse a Rust source file into a `syn::File` and print out a
