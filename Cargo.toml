@@ -89,6 +89,7 @@ members = [
     "examples/heapsize/heapsize_derive",
     "examples/lazy-static/example",
     "examples/lazy-static/lazy-static",
+    "examples/module-discover",
     "examples/trace-var/example",
     "examples/trace-var/trace-var",
     "tests/features",
