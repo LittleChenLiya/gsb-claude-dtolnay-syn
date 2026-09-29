@@ -1,0 +1,15 @@
+[package]
+name = "merge-uses"
+version = "0.0.0"
+authors = ["David Tolnay <dtolnay@gmail.com>"]
+edition = "2024"
+publish = false
+
+[dependencies]
+proc-macro2 = "1"
+quote = "1"
+
+[dependencies.syn]
+default-features = false
+features = ["clone-impls", "full", "parsing", "printing"]
+path = "../.."
