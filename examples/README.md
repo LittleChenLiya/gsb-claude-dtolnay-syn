@@ -17,3 +17,11 @@ individual tokens of the input.
 
 An attribute procedural macro that uses a syntax tree traversal to transform
 certain syntax tree nodes in a function body.
+
+### [`trait-impl-contract`](trait-impl-contract)
+
+Static contract checking between a trait definition and its impl block using
+only `syn` syntax trees: reports required-but-missing associated items,
+statically provable signature differences (receiver, async, unsafe, ABI,
+generic arity, concrete types), and — as a separate category — pairs whose
+compatibility cannot be decided without name resolution or trait solving.
