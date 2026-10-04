@@ -43,6 +43,7 @@ unicode-ident = "1"
 anyhow = "1"
 automod = "1"
 insta = "1"
+proc-macro2 = { version = "1.0.91", features = ["span-locations"] }
 ref-cast = "1"
 rustversion = "1"
 syn-test-suite = { version = "0", path = "tests/features" }

@@ -456,6 +456,10 @@ mod bigint;
 #[cfg_attr(docsrs, doc(cfg(feature = "parsing")))]
 pub mod buffer;
 
+#[cfg(feature = "full")]
+#[cfg_attr(docsrs, doc(cfg(feature = "full")))]
+pub mod contract;
+
 #[cfg(any(
     all(feature = "parsing", feature = "full"),
     all(feature = "printing", any(feature = "full", feature = "derive")),
