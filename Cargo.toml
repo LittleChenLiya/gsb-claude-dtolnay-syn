@@ -83,6 +83,7 @@ features = ["full", "visit", "visit-mut", "fold", "extra-traits"]
 [workspace]
 members = [
     "dev",
+    "examples/attr-edit",
     "examples/dump-syntax",
     "examples/heapsize/example",
     "examples/heapsize/heapsize",

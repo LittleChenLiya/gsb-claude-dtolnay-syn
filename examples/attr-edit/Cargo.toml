@@ -1,0 +1,17 @@
+[package]
+name = "attr-edit"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+# AST 属性编辑计划：按显式路径选中 item，增删其外层属性。
+# 局部验收命令（只构建本 crate 与 syn 本体，不拉根包 dev-deps）：
+#   cargo test -p attr-edit
+
+[dependencies]
+proc-macro2 = { version = "1", features = ["span-locations"] }
+quote = "1"
+
+[dependencies.syn]
+path = "../.."
+features = ["full", "parsing", "printing"]
