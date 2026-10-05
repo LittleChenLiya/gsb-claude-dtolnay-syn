@@ -511,6 +511,10 @@ mod file;
 #[cfg_attr(docsrs, doc(cfg(feature = "full")))]
 pub use crate::file::{File, Frontmatter};
 
+#[cfg(feature = "full")]
+#[cfg_attr(docsrs, doc(cfg(feature = "full")))]
+pub mod module_view;
+
 #[cfg(all(any(feature = "full", feature = "derive"), feature = "printing"))]
 mod fixup;
 
