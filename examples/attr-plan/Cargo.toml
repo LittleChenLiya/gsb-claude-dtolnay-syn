@@ -1,0 +1,15 @@
+[package]
+name = "attr-plan"
+version = "0.0.0"
+authors = ["David Tolnay <dtolnay@gmail.com>"]
+edition = "2021"
+publish = false
+
+[lib]
+name = "attr_plan"
+path = "src/lib.rs"
+
+[dependencies]
+proc-macro2 = "1"
+quote = "1"
+syn = { path = "../..", features = ["full", "parsing", "printing", "clone-impls", "extra-traits"] }
