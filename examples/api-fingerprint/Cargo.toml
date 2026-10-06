@@ -1,0 +1,16 @@
+[package]
+name = "api-fingerprint"
+version = "0.0.0"
+authors = ["David Tolnay <dtolnay@gmail.com>"]
+edition = "2021"
+publish = false
+description = "Compile-free public API fingerprinting on top of syn: normalized signatures and SHA-256 digests for the exported items of a Rust source file."
+
+[dependencies]
+proc-macro2 = { version = "1", features = ["span-locations"] }
+quote = "1"
+
+[dependencies.syn]
+default-features = false
+features = ["full", "parsing", "printing"]
+path = "../.."
