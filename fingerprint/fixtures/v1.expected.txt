@@ -1,0 +1,48 @@
+api-fingerprint v1
+digest: f193c28a9b314ed4676f4db223b930ec807806150933c22002115cc39501eb5e
+status: incomplete (5 unknown item(s); compatibility cannot be confirmed)
+
+entry struct Defaulted @ 71:11
+  pub struct Defaulted < T = u32 > { pub value : T , }
+
+entry enum Kind @ 39:9
+  # [repr (u8)] pub enum Kind { Alpha = 1 , Beta { tag : String } = 2 , Gamma = 4 , }
+
+entry struct Point @ 32:11
+  # [repr (C)] # [derive (Debug)] pub struct Point { pub x : f64 , pub y : f64 , secret : u32 , }
+
+entry fn Point::norm @ 80:11
+  impl Point { pub fn norm (& self) -> f64 { } }
+
+entry trait Store @ 45:10
+  pub trait Store < 'lt0 > { type Item ; fn get (& 'lt0 self , key : & str) -> Option < Self :: Item > ; fn put (& 'lt0 mut self , key : & str , value : Self :: Item) ; }
+
+entry fn compute @ 23:7
+  pub fn compute < 'lt0 , T : Clone + fmt :: Debug > (input : & 'lt0 [T] , scale : u32) -> Vec < T > where T : 'lt0 ,
+
+entry use helper @ 11:4
+  pub use self::nested::helper;
+
+entry fn match @ 75:7
+  pub fn match (type : u32) -> u32
+
+entry struct nested::deep::Leaf @ 59:19
+  pub struct Leaf (pub u8) ;
+
+entry fn nested::helper @ 54:11
+  pub fn helper (x : u8) -> u8
+
+unknown external-reexport @ 9:4
+  pub use serde::Serialize;
+
+unknown macro-generated @ 13:0
+  macro invocation may generate public API: macro_rules ! { ($ name : ident) => { pub fn $ name () { } } ; }
+
+unknown macro-generated @ 19:0
+  macro invocation may generate public API: make_fn ! (generated)
+
+unknown macro-generated @ 32:11
+  derive macro output cannot be expanded without compilation: # [derive (Debug)]
+
+unknown out-of-line-module @ 88:8
+  pub mod ext;

@@ -1,0 +1,12 @@
+[package]
+name = "api-fingerprint"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Public interface fingerprinting for Rust source files, built on syn (no compilation of the analyzed crate required)"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+syn = { path = "..", features = ["full", "visit-mut"] }
+proc-macro2 = { version = "1", features = ["span-locations"] }
+quote = "1"
