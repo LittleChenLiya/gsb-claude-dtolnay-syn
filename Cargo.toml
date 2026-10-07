@@ -84,6 +84,8 @@ features = ["full", "visit", "visit-mut", "fold", "extra-traits"]
 members = [
     "dev",
     "examples/dump-syntax",
+    "examples/generic-usage/example",
+    "examples/generic-usage/generic-usage",
     "examples/heapsize/example",
     "examples/heapsize/heapsize",
     "examples/heapsize/heapsize_derive",

@@ -100,6 +100,8 @@ jobs:
       - uses: actions/checkout@v7
       - uses: dtolnay/rust-toolchain@nightly
       - run: cargo check --manifest-path examples/dump-syntax/Cargo.toml
+      - run: cargo test --manifest-path examples/generic-usage/generic-usage/Cargo.toml
+      - run: cargo check --manifest-path examples/generic-usage/example/Cargo.toml
       - run: cargo check --manifest-path examples/heapsize/example/Cargo.toml
       - run: cargo check --manifest-path examples/lazy-static/example/Cargo.toml
       - run: cargo check --manifest-path examples/trace-var/example/Cargo.toml
