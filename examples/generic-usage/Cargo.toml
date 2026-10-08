@@ -1,0 +1,15 @@
+[package]
+name = "generic-usage"
+version = "0.0.0"
+authors = ["David Tolnay <dtolnay@gmail.com>"]
+edition = "2021"
+publish = false
+
+[dependencies]
+proc-macro2 = { version = "1", features = ["span-locations"] }
+quote = { version = "1", default-features = false }
+
+[dependencies.syn]
+path = "../.."
+default-features = false
+features = ["full", "parsing", "printing", "visit"]
